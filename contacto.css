@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fdf6e9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado */
+.header {
+  background-color: #1ea89a;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav a:hover {
+  color: #ffd700;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Imagen principal */
+.main-image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 25px 10px;
+  width: calc(100% - 20px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  line-height: 1.2;
+}
+
+/* Sección de contacto */
+.contact-section {
+  background-color: #fdf6e9;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+  background-color: #1ea89a;
+  padding: 30px;
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+/* Imágenes decorativas */
+#maiz-image {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#seal-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Responsive - Tablets */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+    height: 50px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .main-image {
+    height: 350px;
+  }
+
+  .image-text {
+    font-size: 28px;
+    left: 30px;
+    bottom: 30px;
+  }
+
+}
+
+/* Responsive - Celulares */
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 150px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .main-image {
+    height: 280px;
+  }
+
+  .image-text {
+    font-size: 24px;
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
